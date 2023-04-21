@@ -1,0 +1,237 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Work+Sans:wght@400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 5rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: #d80806;
+  background: #050505; /*===== Fuente y tipografia =====*/
+  --body-font: "Raleway", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: #fff;
+  background-color: var(--body-bg);
+  overflow-x: hidden !important;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  transition: all 0.3s linear;
+}
+
+a:hover {
+  transform: scale(1.2) !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+/*===== CLASS CSS ===== */
+header {
+  width: 100%;
+  // background-color: green;
+  // padding-block: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
+  hr {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  nav {
+    .nav-logo {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 28px;
+      color: #fff;
+    }
+    .buy-btn {
+      padding: 15px 32px;
+      background: #d80806;
+      box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 140%;
+      color: #ffffff;
+    }
+
+    @media (max-width: 700px) {
+      .buy-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+#hero {
+  // min-height: 100vh;
+  width: 100%;
+  padding-block: 150px;
+  position: relative;
+  overflow-x: hidden;
+  background: url(../images/Background.png) center center no-repeat;
+  background-size: cover;
+
+  h1.title {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+    /* or 125% */
+
+    color: #ffffff;
+
+    @media (max-width: 700px) {
+      font-weight: 700;
+      font-size: 52px;
+      line-height: 120%;
+    }
+  }
+  p.info {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ffffff;
+    max-width: 500px;
+  }
+  a.join-btn {
+    width: max-content;
+    padding: 16px 32px;
+    background: #d80806;
+    box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+  a.join-btn:last-child {
+    background-color: transparent;
+    border: 1px solid #c2b0b0;
+  }
+}
+
+#features {
+  width: 100%;
+  padding-block: 50px;
+  position: relative;
+  overflow-x: hidden;
+  h1.title {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 52px;
+    color: #ffffff;
+
+    @media (max-width: 700px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
+  }
+
+  .row {
+    div.active {
+      background: #d80806;
+    }
+    div {
+      padding-block: 20px;
+      border-radius: 8px;
+      border-radius: 8px;
+      transition: 0.3s all linear;
+
+      h1.head {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #ffffff;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    div:hover {
+      transform: scale(0.9);
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  padding-block: 50px;
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 180%;
+    color: #ffffff;
+  }
+}
